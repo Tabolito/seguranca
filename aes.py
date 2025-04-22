@@ -201,14 +201,14 @@ def bruteforce(ciphertext):
     print("key=" + key.hex() + " decode text " + decrypts(key, ciphertext).decode("utf-8"))
 
   except:
-    pass
+      a= 2
   key = increment_key(key)
   while key != b'\x00' * 16:
     try:
       print("key=" + key.hex() + " decode text " + decrypts(key, ciphertext).decode("utf-8"))
 
     except:
-      pass
+      a= 2
     key = increment_key(key)
 def pad_to_16_bytes(data: bytes, fill_byte: bytes = b'\x00') -> bytes:
     return data.ljust(16, fill_byte)
